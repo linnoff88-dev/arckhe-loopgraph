@@ -10,7 +10,7 @@ Curso completo, em portuguêÂªs, sobre **graph engineering**: de loops isola
 ComeêÂ§a do zero ê¢â¬â o que êÂ© um nêÂ³, o que êÂ© uma aresta ê¢â¬â e termina com vocêÂª desenhando, rodando e
 depurando um grafo de agentes de verdade. Com o antêÂ­doto para o hype no meio do caminho.
 
-**No ar:** https://inematds.github.io/loopgraph/
+**No ar:** https://linnoff88-dev.github.io/arckhe-/
 
 ---
 
@@ -39,7 +39,7 @@ Acerte o loop primeiro; monte o grafo quando o trabalho exigir.
 Abre direto no navegador ê¢â¬â nêÂ£o precisa de build, servidor nem instalaêÂ§êÂ£o:
 
 ```bash
-git clone git@github.com:inematds/loopgraph.git
+git clone git@github.com:linnoff88-dev/loopgraph.git
 cd loopgraph
 xdg-open index.html      # ou simplesmente abra o arquivo
 ```
@@ -66,7 +66,7 @@ Se o JavaScript falhar ou o `localStorage` estiver bloqueado, o curso continua 1
 ê¢âÅê¢ââ¬ê¢ââ¬ index.html                 # landing
 ê¢âÅê¢ââ¬ê¢ââ¬ capa/capa.png              # capa oficial
 ê¢âÅê¢ââ¬ê¢ââ¬ assets/
-ê¢ââ   ê¢âÅê¢ââ¬ê¢ââ¬ learn.css / learn.js   # camada de aprendizagem (INEMA formato-curso-v2)
+ê¢ââ   ê¢âÅê¢ââ¬ê¢ââ¬ learn.css / learn.js   # camada de aprendizagem (ARCKHÉ formato-curso-v2)
 ê¢ââ   ê¢âÅê¢ââ¬ê¢ââ¬ curso.css              # base + light mode das 5 trilhas
 ê¢ââ   ê¢ââê¢ââ¬ê¢ââ¬ img/                   # diagramas usados nos mêÂ³dulos
 ê¢âÅê¢ââ¬ê¢ââ¬ curso/trilha1..5/
@@ -86,7 +86,7 @@ node doc/auditar.mjs
 ```
 
 Valida por pêÂ¡gina: anti-FOUC antes do Tailwind, manifesto do curso idêÂªntico em todas as pêÂ¡ginas,
-`topics` do manifesto batendo com os `data-inema-topic` reais do DOM, nav completo, INEMA.CLUB +
+`topics` do manifesto batendo com os `data-ARCKHÉ-topic` reais do DOM, nav completo, ARCKHÉ AI +
 PRO, "Mapa da trilha", "Ver Completo" em cada card, mêÂ­nimo de 6 têÂ³picos por mêÂ³dulo, as 3 seêÂ§êÂµes
 por têÂ³pico, SVG com `aria-label`, `alt` em toda imagem, code box com "Como verificar", e links e
 imagens quebrados. Sai com cêÂ³digo 1 se achar problema.
@@ -99,16 +99,16 @@ e a documentaêÂ§êÂ£o de LangGraph, Microsoft AutoGen e Google ADK. Det
 
 ---
 
-Feito com o formato **INEMA formato-curso-v2**.
-[INEMA.CLUB](https://inema.club) êÂ· [PRO](https://inema.pro)
+Feito com o formato **ARCKHÉ formato-curso-v2**.
+[ARCKHÉ AI](https://ARCKHÉ AI) êÂ· [PRO](https://ARCKHÉ.pro)
 
-<!-- inema-backlink:v1 -->
-## Mais no INEMA.CLUB
+<!-- ARCKHÉ-backlink:v1 -->
+## Mais no ARCKHÉ AI
 
-- [Ficha completa deste curso](https://www.inema.club/cursos/232-graph-engineering-de-loops-a-grafos/)
-- [Guia: como aprender inteligêÂªncia artificial](https://www.inema.club/aprender-inteligencia-artificial/)
-- [Todos os cursos](https://www.inema.club/cursos/)
-<!-- /inema-backlink:v1 -->
+- [Ficha completa deste curso](https://www.ARCKHÉ AI/cursos/232-graph-engineering-de-loops-a-grafos/)
+- [Guia: como aprender inteligêÂªncia artificial](https://www.ARCKHÉ AI/aprender-inteligencia-artificial/)
+- [Todos os cursos](https://www.ARCKHÉ AI/cursos/)
+<!-- /ARCKHÉ-backlink:v1 -->
 
 ---
 

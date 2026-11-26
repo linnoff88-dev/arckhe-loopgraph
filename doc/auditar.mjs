@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /**
- * Auditoria do curso "Graph Engineering" (formato INEMA v2).
+ * Auditoria do curso "Graph Engineering" (formato ARCKHÉ v2).
  * Uso: node doc/auditar.mjs   (a partir da raiz do projeto)
  *
  * Checa os erros criticos do formato-curso-v2 que dao pra verificar por texto:
- * #4/#4b INEMA.CLUB + PRO · #10 "Ver Completo" por card · #11 min 6 topicos
+ * #4/#4b ARCKHÉ AI + PRO · #10 "Ver Completo" por card · #11 min 6 topicos
  * #12 "Mapa da trilha" · #13 nav completo · #16 h2 simples · #17 SVG inline
  * #18 anti-FOUC antes do Tailwind · #19 data-* estaveis · #25 scroll-margin-top
  * #28 manifesto identico em toda pagina + topics batendo com o DOM
@@ -37,7 +37,7 @@ if (!manifestoRef) { console.error('landing sem manifesto — abortando'); proce
 const esperado = JSON.parse(manifestoRef);
 
 function extrairManifesto(s) {
-  const m = s.match(/<script type="application\/json" data-inema-manifest>([\s\S]*?)<\/script>/);
+  const m = s.match(/<script type="application\/json" data-ARCKHÉ-manifest>([\s\S]*?)<\/script>/);
   return m ? m[1].trim() : null;
 }
 
@@ -52,7 +52,7 @@ for (const f of paginas) {
   const ehIndexTrilha = /trilha\d\/index\.html$/.test(f);
 
   // #18 anti-FOUC antes do Tailwind
-  const iFouc = s.indexOf("localStorage.getItem('inema.prefs')");
+  const iFouc = s.indexOf("localStorage.getItem('ARCKHÉ.prefs')");
   const iTw = s.indexOf('cdn.tailwindcss.com');
   if (iFouc === -1) nota(problemas, f, 'sem anti-FOUC (#18)');
   else if (iTw !== -1 && iFouc > iTw) nota(problemas, f, 'anti-FOUC DEPOIS do Tailwind (#18)');
@@ -67,14 +67,14 @@ for (const f of paginas) {
     } catch { nota(problemas, f, 'manifesto com JSON invalido (#28)'); }
   }
 
-  // <meta name="inema-course">
-  if (!/<meta name="inema-course" content="loopgraph">/.test(s))
-    nota(problemas, f, 'sem <meta name="inema-course"> (#19)');
+  // <meta name="ARCKHÉ-course">
+  if (!/<meta name="ARCKHÉ-course" content="loopgraph">/.test(s))
+    nota(problemas, f, 'sem <meta name="ARCKHÉ-course"> (#19)');
 
-  // #4/#4b INEMA.CLUB + PRO
-  if (!s.includes('https://inema.club')) nota(problemas, f, 'sem link INEMA.CLUB (#4)');
-  if (!s.includes('https://inema.pro')) nota(problemas, f, 'sem link PRO (#4b)');
-  if (!/text-sky-400[^"]*"[^>]*>INEMA\.CLUB|INEMA\.CLUB/.test(s)) avisos.push(`${rel}: conferir cor sky-400 do INEMA.CLUB`);
+  // #4/#4b ARCKHÉ AI + PRO
+  if (!s.includes('https://ARCKHÉ AI')) nota(problemas, f, 'sem link ARCKHÉ AI (#4)');
+  if (!s.includes('https://ARCKHÉ.pro')) nota(problemas, f, 'sem link PRO (#4b)');
+  if (!/text-sky-400[^"]*"[^>]*>ARCKHÉ\.CLUB|ARCKHÉ\.CLUB/.test(s)) avisos.push(`${rel}: conferir cor sky-400 do ARCKHÉ AI`);
 
   // #13 nav completo: as 5 trilhas
   for (const n of [1, 2, 3, 4, 5]) {
@@ -91,7 +91,7 @@ for (const f of paginas) {
   if (!s.includes('assets/curso.css')) nota(problemas, f, 'sem curso.css (light mode + scroll-margin-top)');
   if (!s.includes('assets/learn.css')) nota(problemas, f, 'sem learn.css');
   if (!s.includes('assets/learn.js')) nota(problemas, f, 'sem learn.js');
-  if (!/INEMA\.init\(\)/.test(s)) nota(problemas, f, 'sem INEMA.init()');
+  if (!/ARCKHÉ\.init\(\)/.test(s)) nota(problemas, f, 'sem ARCKHÉ.init()');
 
   // #17 SVG inline
   const svgs = (s.match(/role="img"/g) || []).length;
@@ -105,22 +105,22 @@ for (const f of paginas) {
     const id = f.match(/modulo-(\d-\d)\.html$/)[1];
 
     // #28 topics do manifesto x DOM
-    const topicos = (s.match(/data-inema-topic="/g) || []).length;
+    const topicos = (s.match(/data-ARCKHÉ-topic="/g) || []).length;
     const decl = topicsDeclarados[id];
-    if (topicos !== decl) nota(problemas, f, `tem ${topicos} data-inema-topic mas o manifesto declara ${decl} (#28)`);
+    if (topicos !== decl) nota(problemas, f, `tem ${topicos} data-ARCKHÉ-topic mas o manifesto declara ${decl} (#28)`);
 
-    // #19 data-inema-topic com o id certo
-    const errados = [...s.matchAll(/data-inema-topic="([^"]+)"/g)]
+    // #19 data-ARCKHÉ-topic com o id certo
+    const errados = [...s.matchAll(/data-ARCKHÉ-topic="([^"]+)"/g)]
       .map(m => m[1]).filter(v => !v.startsWith(`modulo-${id}#topico-`));
-    if (errados.length) nota(problemas, f, `data-inema-topic fora do padrao: ${errados.join(', ')} (#19)`);
+    if (errados.length) nota(problemas, f, `data-ARCKHÉ-topic fora do padrao: ${errados.join(', ')} (#19)`);
 
-    if (!s.includes(`data-inema-module="${id}"`)) nota(problemas, f, `sem data-inema-module="${id}" (#19)`);
-    if (!s.includes(`data-inema-meter="modulo:${id}"`)) nota(problemas, f, `sem medidor do modulo ${id}`);
+    if (!s.includes(`data-ARCKHÉ-module="${id}"`)) nota(problemas, f, `sem data-ARCKHÉ-module="${id}" (#19)`);
+    if (!s.includes(`data-ARCKHÉ-meter="modulo:${id}"`)) nota(problemas, f, `sem medidor do modulo ${id}`);
 
     // marcar-lido: 1 por secao
-    const lidos = (s.match(/data-inema-read-toggle/g) || []).length;
+    const lidos = (s.match(/data-ARCKHÉ-read-toggle/g) || []).length;
     if (lidos < topicos) nota(problemas, f, `${lidos} botoes marcar-lido para ${topicos} topicos (#20)`);
-    if (/data-inema-read-toggle(?![^>]*aria-pressed)/.test(s)) nota(problemas, f, 'marcar-lido sem aria-pressed (#20)');
+    if (/data-ARCKHÉ-read-toggle(?![^>]*aria-pressed)/.test(s)) nota(problemas, f, 'marcar-lido sem aria-pressed (#20)');
 
     // #29 legenda que ensina
     const legendas = (s.match(/O que olhar:/g) || []).length;
@@ -135,7 +135,7 @@ for (const f of paginas) {
       nota(problemas, f, 'accordion sem aria-expanded (#26)');
 
     // TOC coerente
-    const totalToc = s.match(/inema-toc-total">(\d+)</);
+    const totalToc = s.match(/ARCKHÉ-toc-total">(\d+)</);
     if (totalToc && +totalToc[1] !== topicos)
       nota(problemas, f, `TOC diz ${totalToc[1]} secoes mas ha ${topicos} (#25)`);
   }
@@ -150,7 +150,7 @@ for (const f of paginas) {
       nota(problemas, f, 'sem h2 simples "Conteudo detalhado" (#16)');
 
     // #10 Ver Completo por card + #11 min 6 topicos
-    const cards = (s.match(/data-inema-module="/g) || []).length;
+    const cards = (s.match(/data-ARCKHÉ-module="/g) || []).length;
     const verCompleto = (s.match(/>Ver Completo</g) || []).length;
     if (verCompleto < cards) nota(problemas, f, `${cards} cards mas ${verCompleto} botoes "Ver Completo" (#10)`);
     const topicos = (s.match(/class="topic-item"/g) || []).length;

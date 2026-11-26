@@ -4,30 +4,30 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="loopgraph" name="inema-course"/>
+<meta content="loopgraph" name="ARCKHÉ-course"/>
 <meta content="Curso completo de Graph Engineering: de loops aislados a grafos de agentes. Fundamentos de grafos, loop engineering, comparación entre agentic, loop y graph, práctica y prompts listos." name="description"/>
-<title>Graph Engineering — de loops a grafos | INEMA</title>
+<title>Graph Engineering — de loops a grafos | ARCKHÉ</title>
 <script>
   (function () {
     try {
       var html = document.documentElement;
-      var DEF = { theme: 'inema-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
+      var DEF = { theme: 'ARCKHÉ-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
       function clone(o) { var r = {}; for (var x in o) r[x] = o[x]; return r; }
       var p = clone(DEF);
       try {
-        var raw = localStorage.getItem('inema.prefs');
+        var raw = localStorage.getItem('ARCKHÉ.prefs');
         if (raw) { var parsed = JSON.parse(raw); if (parsed && typeof parsed === 'object') { for (var k in DEF) if (parsed[k] != null) p[k] = parsed[k]; } }
-        else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'inema-dark'; }
+        else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHÉ-dark'; }
       } catch (e) { p = clone(DEF); }
-      var THEMES = { 'inema-dark': { dark: true, attr: null, cs: 'dark' }, 'claro': { dark: false, attr: null, cs: 'light' }, 'sepia': { dark: false, attr: 'sepia', cs: 'light' }, 'foco': { dark: null, attr: 'foco', cs: null }, 'contraste': { dark: true, attr: 'contraste', cs: 'dark' } };
-      var t = THEMES[p.theme] || THEMES['inema-dark'];
+      var THEMES = { 'ARCKHÉ-dark': { dark: true, attr: null, cs: 'dark' }, 'claro': { dark: false, attr: null, cs: 'light' }, 'sepia': { dark: false, attr: 'sepia', cs: 'light' }, 'foco': { dark: null, attr: 'foco', cs: null }, 'contraste': { dark: true, attr: 'contraste', cs: 'dark' } };
+      var t = THEMES[p.theme] || THEMES['ARCKHÉ-dark'];
       if (t.dark === true) html.classList.add('dark'); else if (t.dark === false) html.classList.remove('dark');
       if (t.attr) html.setAttribute('data-theme', t.attr); else html.removeAttribute('data-theme');
       html.style.colorScheme = (t.cs ? t.cs : (html.classList.contains('dark') ? 'dark' : 'light'));
       html.setAttribute('data-font', p.font || 'inter');
       html.setAttribute('data-accent', p.accent || 'emerald');
       var s = html.style, scale = (+p.fontScale || 100);
-      s.setProperty('--inema-font-scale', (scale / 100).toString());
+      s.setProperty('--ARCKHÉ-font-scale', (scale / 100).toString());
       s.setProperty('font-size', scale + '%');
       s.setProperty('--measure', (+p.lineWidth || 68) + 'ch');
       s.setProperty('--lh-body', (+p.leading || 1.7).toString());
@@ -40,7 +40,7 @@
     } catch (err) { try { document.documentElement.classList.add('dark'); document.documentElement.style.colorScheme = 'dark'; } catch (e) {} }
   })();
   </script>
-<script data-inema-manifest="" type="application/json">
+<script data-ARCKHÉ-manifest="" type="application/json">
   {
     "course": "loopgraph",
     "tracks": [
@@ -82,8 +82,8 @@
 <style>
     /* so o que e especifico da landing — o resto vem de assets/curso.css */
   </style>
-<link href="https://inematds.github.io/loopgraph/" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/loopgraph/en/" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/loopgraph/es/" hreflang="es" rel="alternate"/></head>
-<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../en/" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="./" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
+<link href="https://linnoff88-dev.github.io/arckhe-/" hreflang="pt-BR" rel="alternate"/><link href="https://linnoff88-dev.github.io/arckhe-/en/" hreflang="en" rel="alternate"/><link href="https://linnoff88-dev.github.io/arckhe-/es/" hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="ARCKHÉ-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../en/" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="./" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
 <a class="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:m-2 focus:px-4 focus:py-2 focus:rounded-lg focus:bg-dark-700" href="#conteudo">Saltar al contenido</a>
 <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -94,9 +94,9 @@
 <span class="font-bold text-lg hidden lg:inline">Graph Engineering</span>
 </a>
 <span class="text-neutral-600 hidden sm:inline">|</span>
-<a class="text-sky-400 hover:text-sky-300 text-sm font-medium hidden sm:inline" href="https://inema.club" target="_blank">INEMA.CLUB</a>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium hidden sm:inline" href="https://ARCKHÉ AI" target="_blank">ARCKHÉ AI</a>
 <span class="text-neutral-600 hidden sm:inline">-</span>
-<a class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200 text-sm font-medium hidden sm:inline" href="https://inema.pro" target="_blank">PRO</a>
+<a class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200 text-sm font-medium hidden sm:inline" href="https://ARCKHÉ.pro" target="_blank">PRO</a>
 </div>
 <div class="flex items-center space-x-1">
 <a class="px-2 sm:px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="curso/trilha1/index.html"><span class="lg:hidden">T1</span><span class="hidden lg:inline">Fundamentos</span></a>
@@ -104,9 +104,9 @@
 <a class="px-2 sm:px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="curso/trilha3/index.html"><span class="lg:hidden">T3</span><span class="hidden lg:inline">Comparativo</span></a>
 <a class="px-2 sm:px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="curso/trilha4/index.html"><span class="lg:hidden">T4</span><span class="hidden lg:inline">Práctica</span></a>
 <a class="px-2 sm:px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="curso/trilha5/index.html"><span class="lg:hidden">T5</span><span class="hidden lg:inline">Manos a la obra</span></a>
-<button class="hidden sm:inline-flex items-center gap-1 px-2 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-neutral-100 transition-colors" data-inema-journey-open="" title="Mi recorrido" type="button">
+<button class="hidden sm:inline-flex items-center gap-1 px-2 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-neutral-100 transition-colors" data-ARCKHÉ-journey-open="" title="Mi recorrido" type="button">
 <span aria-hidden="true">◷</span><span class="hidden xl:inline">Recorrido</span>
-<span aria-hidden="true" class="inema-journey-badge hidden"></span>
+<span aria-hidden="true" class="ARCKHÉ-journey-badge hidden"></span>
 </button>
 <button aria-label="Alternar entre tema claro y oscuro" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-1" id="theme-toggle">
 <svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
@@ -154,14 +154,14 @@
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-5 max-w-3xl">
 <div class="flex items-center justify-between mb-3">
 <h2 class="text-sm font-semibold text-neutral-300">Tu progreso en el curso</h2>
-<div aria-label="Progreso del curso" aria-valuemax="100" aria-valuemin="0" class="inema-meter text-sm" data-inema-meter="curso" role="progressbar">
-<span class="inema-meter-pct text-amber-400 font-bold">0%</span>
-<span class="inema-meter-count text-neutral-400 ml-2">0 de 90</span>
+<div aria-label="Progreso del curso" aria-valuemax="100" aria-valuemin="0" class="ARCKHÉ-meter text-sm" data-ARCKHÉ-meter="curso" role="progressbar">
+<span class="ARCKHÉ-meter-pct text-amber-400 font-bold">0%</span>
+<span class="ARCKHÉ-meter-count text-neutral-400 ml-2">0 de 90</span>
 </div>
 </div>
 <div class="flex justify-start flex-wrap gap-3">
 <a class="px-4 py-2 text-sm bg-amber-600 hover:bg-amber-500 text-white rounded-lg font-semibold transition-colors" href="curso/trilha1/modulo-1-1.html">Empezar por el módulo 1.1</a>
-<button class="px-4 py-2 text-sm bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors" data-inema-journey-open="" type="button">Mi recorrido / continuar</button>
+<button class="px-4 py-2 text-sm bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors" data-ARCKHÉ-journey-open="" type="button">Mi recorrido / continuar</button>
 </div>
 <p class="text-xs text-neutral-500 mt-3">Tu progreso, tus dudas y tus notas quedan guardados en tu propio navegador. No se envía nada a ningún servidor.</p>
 </div>
@@ -277,8 +277,8 @@
 </div>
 <h3 class="text-2xl font-bold mb-2 group-hover:text-emerald-400 transition-colors">🔵 Fundamentos: el grafo</h3>
 <p class="text-neutral-400 text-sm mb-4">Desde cero absoluto. Nodo, arista, peso, dirección, ciclo — y por qué tu mañana con café ya es un grafo.</p>
-<div aria-label="Progreso de la ruta 1" aria-valuemax="100" aria-valuemin="0" class="inema-meter text-xs text-neutral-500" data-inema-meter="trilha:1" role="progressbar">
-<span class="inema-meter-pct text-emerald-400 font-bold">0%</span><span class="inema-meter-count ml-2">0 de 18</span>
+<div aria-label="Progreso de la ruta 1" aria-valuemax="100" aria-valuemin="0" class="ARCKHÉ-meter text-xs text-neutral-500" data-ARCKHÉ-meter="trilha:1" role="progressbar">
+<span class="ARCKHÉ-meter-pct text-emerald-400 font-bold">0%</span><span class="ARCKHÉ-meter-count ml-2">0 de 18</span>
 </div>
 </a>
 <a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-6 transition-all" href="curso/trilha2/index.html">
@@ -288,8 +288,8 @@
 </div>
 <h3 class="text-2xl font-bold mb-2 group-hover:text-blue-400 transition-colors">🔁 Loop Engineering</h3>
 <p class="text-neutral-400 text-sm mb-4">El ciclo que hizo que la IA dejara de necesitar niñera, y las cuatro formas estructurales en que puede traicionarte.</p>
-<div aria-label="Progreso de la ruta 2" aria-valuemax="100" aria-valuemin="0" class="inema-meter text-xs text-neutral-500" data-inema-meter="trilha:2" role="progressbar">
-<span class="inema-meter-pct text-blue-400 font-bold">0%</span><span class="inema-meter-count ml-2">0 de 18</span>
+<div aria-label="Progreso de la ruta 2" aria-valuemax="100" aria-valuemin="0" class="ARCKHÉ-meter text-xs text-neutral-500" data-ARCKHÉ-meter="trilha:2" role="progressbar">
+<span class="ARCKHÉ-meter-pct text-blue-400 font-bold">0%</span><span class="ARCKHÉ-meter-count ml-2">0 de 18</span>
 </div>
 </a>
 <a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-6 transition-all" href="curso/trilha3/index.html">
@@ -299,8 +299,8 @@
 </div>
 <h3 class="text-2xl font-bold mb-2 group-hover:text-purple-400 transition-colors">⚖️ Agentic × Loop × Graph</h3>
 <p class="text-neutral-400 text-sm mb-4">Las cinco capas, la comparación en tres columnas y la tabla mito × realidad que te salva del próximo tuit.</p>
-<div aria-label="Progreso de la ruta 3" aria-valuemax="100" aria-valuemin="0" class="inema-meter text-xs text-neutral-500" data-inema-meter="trilha:3" role="progressbar">
-<span class="inema-meter-pct text-purple-400 font-bold">0%</span><span class="inema-meter-count ml-2">0 de 18</span>
+<div aria-label="Progreso de la ruta 3" aria-valuemax="100" aria-valuemin="0" class="ARCKHÉ-meter text-xs text-neutral-500" data-ARCKHÉ-meter="trilha:3" role="progressbar">
+<span class="ARCKHÉ-meter-pct text-purple-400 font-bold">0%</span><span class="ARCKHÉ-meter-count ml-2">0 de 18</span>
 </div>
 </a>
 <a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-amber-500/30 p-6 transition-all" href="curso/trilha4/index.html">
@@ -310,8 +310,8 @@
 </div>
 <h3 class="text-2xl font-bold mb-2 group-hover:text-amber-400 transition-colors">🕸️ Graph Engineering en la práctica</h3>
 <p class="text-neutral-400 text-sm mb-4">Org graph × work graph, zone defense, fan-out/fan-in, state schema y los modos de falla que solo tiene el grafo.</p>
-<div aria-label="Progreso de la ruta 4" aria-valuemax="100" aria-valuemin="0" class="inema-meter text-xs text-neutral-500" data-inema-meter="trilha:4" role="progressbar">
-<span class="inema-meter-pct text-amber-400 font-bold">0%</span><span class="inema-meter-count ml-2">0 de 18</span>
+<div aria-label="Progreso de la ruta 4" aria-valuemax="100" aria-valuemin="0" class="ARCKHÉ-meter text-xs text-neutral-500" data-ARCKHÉ-meter="trilha:4" role="progressbar">
+<span class="ARCKHÉ-meter-pct text-amber-400 font-bold">0%</span><span class="ARCKHÉ-meter-count ml-2">0 de 18</span>
 </div>
 </a>
 <a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/30 p-6 transition-all md:col-span-2" href="curso/trilha5/index.html">
@@ -321,8 +321,8 @@
 </div>
 <h3 class="text-2xl font-bold mb-2 group-hover:text-teal-400 transition-colors">🛠️ Manos a la obra</h3>
 <p class="text-neutral-400 text-sm mb-4">Migrar un caso real de bucle a grafo, modelar el grafo de tu negocio y de tu backlog, y la biblioteca de prompts para copiar y pegar.</p>
-<div aria-label="Progreso de la ruta 5" aria-valuemax="100" aria-valuemin="0" class="inema-meter text-xs text-neutral-500" data-inema-meter="trilha:5" role="progressbar">
-<span class="inema-meter-pct text-teal-400 font-bold">0%</span><span class="inema-meter-count ml-2">0 de 18</span>
+<div aria-label="Progreso de la ruta 5" aria-valuemax="100" aria-valuemin="0" class="ARCKHÉ-meter text-xs text-neutral-500" data-ARCKHÉ-meter="trilha:5" role="progressbar">
+<span class="ARCKHÉ-meter-pct text-teal-400 font-bold">0%</span><span class="ARCKHÉ-meter-count ml-2">0 de 18</span>
 </div>
 </a>
 </div>
@@ -349,11 +349,11 @@
 </main>
 <footer class="border-t border-dark-600 py-8 mt-16">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-<p>Graph Engineering — de loops a grafos · INEMA 2026</p>
+<p>Graph Engineering — de loops a grafos · ARCKHÉ 2026</p>
 <p class="mt-2">
-<a class="text-sky-400 hover:text-sky-300" href="https://inema.club" target="_blank">INEMA.CLUB</a>
+<a class="text-sky-400 hover:text-sky-300" href="https://ARCKHÉ AI" target="_blank">ARCKHÉ AI</a>
 <span class="text-neutral-600 mx-1">-</span>
-<a class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200" href="https://inema.pro" target="_blank">PRO</a>
+<a class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200" href="https://ARCKHÉ.pro" target="_blank">PRO</a>
 </p>
 </div>
 </footer>
@@ -379,10 +379,10 @@
     htmlEl.classList.toggle('dark');
     const dark = htmlEl.classList.contains('dark');
     localStorage.setItem('theme', dark ? 'dark' : 'light');
-    try { const p = JSON.parse(localStorage.getItem('inema.prefs') || '{}'); p.theme = dark ? 'inema-dark' : 'claro'; localStorage.setItem('inema.prefs', JSON.stringify(p)); } catch (e) {}
+    try { const p = JSON.parse(localStorage.getItem('ARCKHÉ.prefs') || '{}'); p.theme = dark ? 'ARCKHÉ-dark' : 'claro'; localStorage.setItem('ARCKHÉ.prefs', JSON.stringify(p)); } catch (e) {}
   });
 </script>
 <script src="../assets/learn.js"></script>
-<script>if (window.INEMA && typeof window.INEMA.init === 'function') { window.INEMA.init(); }</script>
+<script>if (window.ARCKHÉ && typeof window.ARCKHÉ.init === 'function') { window.ARCKHÉ.init(); }</script>
 </body>
 </html>

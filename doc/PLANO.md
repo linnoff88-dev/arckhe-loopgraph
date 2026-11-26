@@ -1,6 +1,6 @@
 # Curso "Graph Engineering — de loops a grafos" (id: `loopgraph`)
 
-Formato INEMA **formato-curso-v2**. Self-contained, abre em `file://`.
+Formato ARCKHÉ **formato-curso-v2**. Self-contained, abre em `file://`.
 5 trilhas × 3 módulos × 6 tópicos = **90 tópicos**.
 
 ## Fonte
@@ -28,8 +28,8 @@ Formato INEMA **formato-curso-v2**. Self-contained, abre em `file://`.
 - `assets/curso.css` — base v1 + light mode completo (5 acentos) + bordas dark + SVG light + pulso
 - `doc/_template.html` — head canônico + nav + footer (trocar `{{REL}}`)
 
-Em cada página: anti-FOUC **inline no topo do head**, manifesto `data-inema-manifest`
-**idêntico**, `INEMA.init()` no fim. `REL` = `.` na landing, `../..` nas páginas de curso.
+Em cada página: anti-FOUC **inline no topo do head**, manifesto `data-ARCKHÉ-manifest`
+**idêntico**, `ARCKHÉ.init()` no fim. `REL` = `.` na landing, `../..` nas páginas de curso.
 
 ## SVG por módulo (evitar repetir o mesmo primitivo)
 - 1-1: nós soltos · nós+arestas · manhê com pesos · DAG × ciclo
@@ -72,8 +72,8 @@ estável em `assets/img/`. Mapa completo de uso em **`doc/IMAGENS.md`**. `capa/c
 - [x] `doc/auditar.mjs` — auditoria automática (`node doc/auditar.mjs`)
 - [x] `capa/capa.png`
 - [ ] verificaçêo final (checklist v2 + contagem de tópicos × manifesto)
-- [ ] **publicar**: repo `inematds/loopgraph` → push → GitHub Pages (raiz, branch main)
-      → skill `atualiza-portal` com a URL `https://inematds.github.io/loopgraph/`
+- [ ] **publicar**: repo `linnoff88-dev/loopgraph` → push → GitHub Pages (raiz, branch main)
+      → skill `atualiza-portal` com a URL `https://linnoff88-dev.github.io/arckhe-/`
 
 ## Conteúdo já decidido das trilhas 2–5 (para nêo re-derivar)
 
@@ -135,6 +135,6 @@ virar script executável (o "two-step": desenhe o grafo → gere o código) · a
 escrever o state schema entre dois nós · escrever o verificador antes do prompt.
 
 ## Regra de verificaçêo final
-`topics` no manifesto **tem que bater** com a contagem de `[data-inema-topic]` no DOM de cada
-módulo (6 em todos). Rodar o script de auditoria (contagem + links quebrados + INEMA.CLUB/PRO
+`topics` no manifesto **tem que bater** com a contagem de `[data-ARCKHÉ-topic]` no DOM de cada
+módulo (6 em todos). Rodar o script de auditoria (contagem + links quebrados + ARCKHÉ AI/PRO
 + anti-FOUC antes do Tailwind + ≥1 SVG `role="img"` por módulo).
